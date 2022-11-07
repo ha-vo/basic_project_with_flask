@@ -1,0 +1,25 @@
+{% extends 'layout.html'%}
+{% block content %}
+
+<form method="POST" action="">
+    <fieldset class="form-group" style="text-align: left;">
+        <div class="mb-3">
+            <label for="sender" class="form-label">Số tài khoản người gửi: </label>
+            <input type="text" class="form-control" name="sender" id="sender" style="height: 30px;">
+        </div>
+        <div class="mb-3">
+            <label for="sdt" class="form-label">Số điện thoại cần gửi </label>
+            <input type="text" class="form-control" name="sdt" id="sdt" style="height: 30px;">
+        </div>
+        <div class="mb-3">
+            <label for="money" class="form-label">Số tiền muốn nạp vào điện thoại </label>
+            <input type="text" class="form-control" name="money" id="money" style="height: 30px;">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-3 center"  value="submit">Nạp tiền</button>
+        </div>
+    </fieldset>
+</form>
+
+
+{% endblock %}

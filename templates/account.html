@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}
+{% block content %}
+    <form method="POST" action="">
+        <fieldset class="form-group" style="text-align: left;">
+            <div class="mb-1">
+                <label for="user" class="form-label">Tên người dùng</label>
+                <input type="text" class="form-control" name="user" id="user" style="height: 30px;">
+            </div>
+            <div class="mb-1">
+                <label for="cmnd" class="form-label">Số CMND</label>
+                <input type="text" class="form-control" id="cmnd" name="cmnd" style="height: 30px;">
+            </div>
+            <div class="mb-1">
+                <label for="day" class="form-label">Ngày tháng năm sinh</label>
+                <input type="text" class="form-control" id="day" name="day" style="height: 30px;">
+            </div>
+            <div class="mb-1">
+                <label for="sdt" class="form-label">Số điện thoại</label>
+                <input type="text" class="form-control" id="sdt" name="sdt" style="height: 30px;">
+            </div>
+            <div class="mb-1">
+                <label for="place" class="form-label">Quê quán</label>
+                <input type="text" class="form-control" id="place" name="place" style="height: 30px;">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-3 center"  value="submit">Tạo tài khoản</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock  %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html'%}
+{% block content %}
+    <h2> THÔNG TIN CÁC TÀI KHOẢN ĐÃ TẠO</h2>
+        <div class="scrolling" style="overflow-y: scroll; height:330px;">
+            {% for row in records %}
+                <div class="border-bottom mt-4  text-start ">
+                    <div> Tên người dùng: {{row[0]}}</div>
+                    <div> Số Tài Khoản: {{row[4]}}</div>
+                    <div> Số tiền trong tài khoản: {{row[5]}}</div>
+                    <div> Số chứng minh nhân dân: {{row[1]}}</div>
+                    <div> Ngày Sinh: {{row[2]}}</div>
+                    <div> Quê quán: {{row[3]}}</div>
+                    <div> Số điện thoại: {{row[6]}}</div>
+                    <div> Số tiền trong điện thoại: {{row[7]}}</div>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}

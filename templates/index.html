@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for categories, message in messages %}
+            {% if categories == "error" %}
+                 <div class="alert alert-danger">{{ message }}</div>
+            {% else %}
+                 <div class="alert alert-success">{{ message }}</div>
+            {% endif %}            
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="row " style="margin-top: 50px;">
+        <div class="col border border-secondary rounded bg-success p-2 text-white bg-opacity-75 center_mk"  >
+        <a href="{{url_for('account')}}" class="text-white" style="text-decoration: none;">Tạo tài khoản</a> 
+        </div>
+        <div class="col border border-secondary rounded bg-success p-2 text-white bg-opacity-75 center_mk">
+        <a href="{{url_for('tranfers')}}" class="text-white" style="text-decoration: none;">Chuyển tiền</a> 
+        </div>
+    </div>
+    <div class="row "style="margin-top: 50px;">
+        <div class="col border border-secondary rounded bg-success p-2 text-white bg-opacity-75 center_mk">
+        <a href="{{url_for('recharge')}}" class="text-white" style="text-decoration: none;">Nạp tiền điện thoại</a> 
+        </div>
+        <div class="col border border-secondary rounded bg-success p-2 text-white bg-opacity-75 center_mk">
+            <a href="{{url_for('info')}}" class="text-white" style="text-decoration: none;">thông tin tài khoản</a> 
+        </div>
+    </div>
+{% endblock %}
